@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  publish_mode: editorial_workflow
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "themes/oneclicktheme/static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "home-section"
+    label: "Homepage"
+    files:
+      - file: "data/homepage/herobanner.json"
+        label: "Hero Banner"
+        name: "hero-banner"
+        fields:
+          - {label: Title, name: mainTitle, widget: string}
+          - {label: Description, name: lead, widget: markdown}
+          - {label: CV, name: cv_link, widget: string}
+          - {label: Profile Image, name: profileImage, widget: image}
+  - name: "logo"
+    label: "Logo Management"
+    files:
+      - file: "data/logo/logo.json"
+        label: "Logo Management"
+        name: "logo"
+        fields:
+          - {label: "Logo", name: "logo", widget: image}
+          - {label: "Site Name", name: "logoText", widget: string}
+  - name: "contact"
+    label: "Contact Management"
+    files:
+      - file: "data/contact/contact.json"
+        label: "Contact Management"
+        name: "contact"
+        fields:
+          - {label: "Email", name: "email", widget: string, required: false}
+          - {label: "Facebook", name: "facebook", widget: string, required: false}
+          - {label: "Twitter", name: "twitter", widget: string, required: false}
+          - {label: "Linkedin", name: "linkedin", widget: string, required: false}
+          - {label: "Medium", name: "medium", widget: string, required: false}
+          - {label: "Github", name: "github", widget: string, required: false}
+          - {label: "Instagram", name: "instagram", widget: string, required: false}
+          - {label: "Codepen", name: "codepen", widget: string, required: false}

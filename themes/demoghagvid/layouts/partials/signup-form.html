@@ -1,11 +1,13 @@
-<form class="mt-10" name="contact" method="POST" data-netlify-recaptcha="true" netlify>
+<form class="mt-10" name="contact"
+      action="/success"
+      method="POST" data-netlify-recaptcha="true" netlify>
     <div class="mb-4">
         <label class="block font-bold mb-1 text-sm mb-1">Your Site Name</label>
         <input class="outline-none border w-full rounded px-2 py-3" type="text" name="name" required />
     </div>
     <div class="mb-4">
         <label class="block font-bold mb-1 text-sm mb-1">Your Email</label>
-        <input class="outline-none border w-full rounded px-2 py-3" type="email" name="email" required/>
+        <input class="outline-none border w-full rounded px-2 py-3" type="email" name="email" required />
     </div>
     <input type="hidden" name="--primary-bg-color" value="#400080">
     <input type="hidden" name="--primary-color" value="#ffffff">

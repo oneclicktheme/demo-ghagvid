@@ -20,34 +20,68 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,700" rel="stylesheet">
 
     <!-- Main Stylesheet --> 
-    <link rel="stylesheet" href="/css/tailwind.min.69d6292230758b141d007d5904cf4ce02a4194cbc7c7d84dfe89b4fd8375d9d1.css" integrity="sha256-adYpIjB1ixQdAH1ZBM9M4CpBlMvHx9hN/om0/YN12dE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/tailwind.min.81864e057ca2acae53d15e8afff7509abea6a4365b18a18549d0bdaa3cc11760.css" integrity="sha256-gYZOBXyirK5T0V6K//dQmr6mpDZbGKGFSdC9qjzBF2A=" crossorigin="anonymous">
     
     
-    <link rel="stylesheet" href="/css/app.min.a2f5273ae882db387d8fafd6855edf6ac9a3597b17a7e6883f12b4df59261d03.css" integrity="sha256-ovUnOuiC2zh9j6/WhV7fasmjWXsXp&#43;aIPxK031kmHQM=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/app.min.b8dcfc24e248caabacb9f3808f5c4f0b07061c4f9e1cf127a6a89084ed1f9399.css" integrity="sha256-uNz8JOJIyqusufOAj1xPCwcGHE&#43;eHPEnpqiQhO0fk5k=" crossorigin="anonymous">
     
     
 
 </head>
 
 
-<body class="bg-primary-background text-base-color antialiased font-body leading-snug">
+<body class="bg-primary-bg antialiased font-body leading-snug">
 
-<section class="oneclicktheme-header px-4 py-2">
+
+<section class="hidden md:block oneclicktheme-header px-4 py-2">
     <div class="container mx-auto">
         <div class="flex flex-wrap justify-between items-center">
-            <div>
-                <a class="inline-block" href="https://oneclicktheme.netlify.com/" target="_blank">
+            <div class="mr-4 xl:mr-0">
+                <a class="inline-block" href="https://www.oneclicktheme.com/" target="_blank">
                     <img class="h-10 inline-block rounded-full shadow-md w-10" src="/img/oneclicktheme-logo.png" alt="One Click Theme">
                 </a>
             </div>
-            <div>
+            <div class="text-grey">
+                <div class="flex items-center">
+                    <div class="flex flex-wrap mr-8 items-center justify-between">
+                        <h3 class="font-bold text-sm mr-3">Default Theme Switcher</h3>
+                        <div class="flex">
+                            <span class="default-switch cursor-pointer w-6 h-6 xl:w-10 xl:h-10 inline-block rounded-full mr-4" data-bg-color="#b84130"
+                                  data-color="#ffffff"
+                                  style="background-color: #b84130">&nbsp;</span>
+                            <span class="default-switch cursor-pointer w-6 h-6 xl:w-10 xl:h-10 inline-block rounded-full mr-4" data-bg-color="#363d98"
+                                  data-color="#ffffff"
+                                  style="background-color: #363d98">&nbsp;</span>
+                            <span class="default-switch cursor-pointer w-6 h-6 xl:w-10 xl:h-10 inline-block rounded-full" data-bg-color="#228928"
+                                  data-color="#333333"
+                                  style="background-color: #228928">&nbsp;</span>
+                        </div>
+                    </div>
+                    <h3 class="font-bold mr-4 text-sm">Dynamic Color</h3>
+                    <div class="flex items-center">
+                        <div class="flex items-center mr-3">
+                            <label class="text-sm mr-2">Background:</label>
+                            <input class="cursor-pointer w-6 h-6 xl:h-10 outline-none xl:w-10 input-color-picker"
+                                   type="color" data-id="bg-color"
+                                   name="Background">
+                        </div>
+                        <div class="flex items-center">
+                            <label class="text-sm mr-2">Color:</label>
+                            <input class="cursor-pointer w-6 h-6 xl:h-10 outline-none xl:w-10 input-color-picker"
+                                   type="color" data-id="color" name="Color">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 xl:flex-none text-center xl:text-left mt-3 xl:mt-0">
                 <span class="inline-block mr-2 text-sm text-grey">If you like the theme then</span>
                 <button class="outline-none modal-toggle btn relative text-sm inline-block
-                 px-4 py-2 rounded text-sm uppercase font-bold" href="#">Let's start</button>
+                 px-4 py-2 rounded text-sm uppercase font-bold" href="#">Let's start
+                </button>
             </div>
         </div>
     </div>
-    <div class="modal">
+    <div class="hidden xl:block modal">
         <div class="modal-overlay modal-toggle"></div>
         <div class="modal-wrapper modal-transition">
             <button class="modal-close modal-toggle">x</button>
@@ -63,16 +97,18 @@
                                     <h2 class="capitalize font-black text-3xl">To get started</h2>
                                     <p class="text-grey text-xs">Please fill the necessary information for your site</p>
                                 </div>
-                                <form class="mt-10" name="contact" method="POST" data-netlify-recaptcha="true" netlify>
+                                <form class="mt-10" name="contact" action="/themes/demoghagvid/layouts/partials/success.html" method="POST" data-netlify-recaptcha="true" netlify>
     <div class="mb-4">
         <label class="block font-bold mb-1 text-sm mb-1">Your Site Name</label>
         <input class="outline-none border w-full rounded px-2 py-3" type="text" name="name" required />
     </div>
-    <div class="mb-8">
+    <div class="mb-4">
         <label class="block font-bold mb-1 text-sm mb-1">Your Email</label>
         <input class="outline-none border w-full rounded px-2 py-3" type="email" name="email" required/>
     </div>
-    <div data-netlify-recaptcha="true"></div>
+    <input type="hidden" name="--primary-bg-color" value="#400080">
+    <input type="hidden" name="--primary-color" value="#ffffff">
+    <div class="mb-8" data-netlify-recaptcha="true"></div>
     <div>
         <button class="btn font-bold inline-block outline-none px-8 py-3 relative rounded text-base text-sm uppercase" type="submit">Send</button>
     </div>
@@ -87,30 +123,37 @@
     </div>
 </section>
 
+
 <div class="relative">
     
 <header class="absolute top-0 left-0 right-0 py-6 px-4 z-50">
     <div class="container mx-auto">
         
         <div class="flex flex-wrap justify-between items-center">
-            <div>
-                <a class="h-16 inline-block" href="/">
+            <div class="flex items-center">
+                <a class="h-10 xl:h-16 inline-block" href="/">
                     <img class="inline-block h-full" src="/img/logo.svg" alt="" />
                 </a>
+                
+                <div class="ml-4">
+                    <span class="text-lg xl:text-2xl font-bold text-base-color">Demo</span>
+                </div>
+                
             </div>
+            
+            
             <nav>
                 <ul class="flex items-center">
-                    
-                    <li class="mr-8">
-                        <a class="inline-block text-base-link hover:text-primary-text" href="/">Home</a>
+                    <li>
+                        <span class="text-base-color inline-block mr-4">
+                            Contact me:</span>
+                        <a class="inline-block text-primary-text"href="mailto:info-user@user.com.np">
+                            info-user@user.com.np</a>
                     </li>
-                    
-                    <li class="mr-8">
-                        <a class="inline-block text-base-link hover:text-primary-text" href="https://medium.com/">Blog</a>
-                    </li>
-                    
                 </ul>
             </nav>
+            
+            
         </div>
         
     </div>
@@ -123,7 +166,7 @@
 
 
 <section class="section-banner px-4">
-    <div class="container mx-auto">
+    <div class="container mx-auto text-base-color">
         
         <div class="relative overflow-hidden h-screen flex flex-wrap items-center -mx-4">
             <div class="w-full md:w-2/3 px-4">
@@ -132,18 +175,25 @@
                         <span class="uppercase">Hello</span>
                         <h1 class="title font-header">I'm <span class="text-primary-text">John Doe</span></h1>
                         <p class="text-sm mt-4">A freelance UI/UX designer from Nepal</p>
+                        
+                        <a class="border-2 transition border-primary-text inline-block mt-10
+                        p-4 text-base-color hover:text-primary-text"
+                           href="http://www.africau.edu/images/default/sample.pdf" target="">Download Resume</a>
+                        
                     </div>
                 </div>
             </div>
             <div class="hidden md:block md:w-1/3 px-4">
                 <div class="text-center">
-                    <div class="inline-block relative custom-border">
-                        <img class="inline-block profile-img rounded shadow" src="/img/hero-profile.jpg" alt="John Doe">
+                    <div class="js-tilt inline-block relative custom-border">
+                        <img class="inline-block profile-img rounded shadow" src="/img/hero-profile.jpg"
+                             alt="John Doe">
                     </div>
                 </div>
             </div>
             <div class="absolute bottom-0 right-0 -mb-10 -mr-20">
-                <h1 class="font-bold text-primary-text opacity-25" style="font-size: 5rem; opacity: 0.1">John Doe</h1>
+                <h1 class="font-bold text-primary opacity-25" style="font-size: 5rem; opacity: 0.1">
+                    John Doe</h1>
             </div>
         </div>
         
@@ -158,59 +208,121 @@
     
 <footer class="absolute bottom-0 left-0 right-0 p-4">
     <div class="container mx-auto">
-        <div class="flex flex-wrap justify-between items-center text-sm">
-            <div class="text-grey">
+        <div class="flex flex-wrap justify-center xl:justify-between items-center text-sm">
+            <div class="text-base-color text-center xl:text-left">
                 <span>&copy; 2019</span>
-                <a href="#" class="text-base-link hover:text-primary-text" target="_blank">OneClickTheme</a>
+                <a href="https://www.oneclicktheme.com/" class="text-primary-text" target="_blank">OneClickTheme</a>
                 <span>- Demo Ghagvid Theme. All rights reserved</span></div>
-            <ul class="flex items-center text-sm">
-                <li class="mr-4">
-                    <a href="#" target="_blank"
-                       class="text-base-link hover:text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
-                        <svg class="fill-current" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="mr-4">
-                    <a href="#" target="_blank"
-                       class="text-base-link hover:text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
-                        <svg class="fill-current" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"/>
-                        </svg>
-                    </a>
-                </li>
+            
+            <ul class="social-link mt-4 xl:mt-0 w-full flex items-center justify-center xl:w-auto xl:justify-start text-sm">
+                
+                
                 <li>
-                    <a href="#" target="_blank"
-                       class="text-base-link hover:text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
-                        <svg class="fill-current" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z"/>
+                    <a href="https://www.facebook.com/" target="_blank"
+                       class="text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
+                        <svg class="fill-current w-4 h-4">
+                            <use xlink:href="/img/icons.svg#ic-facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                         </svg>
                     </a>
                 </li>
+                
+
+                
+                
+                <li>
+                    <a href="https://www.twitter.com/" target="_blank"
+                       class="text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
+                        <svg class="fill-current w-4 h-4">
+                            <use xlink:href="/img/icons.svg#ic-twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+
+                
+                
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank"
+                       class="text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
+                        <svg class="fill-current w-4 h-4">
+                            <use xlink:href="/img/icons.svg#ic-linkedin" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+
+                
+                
+                <li>
+                    <a href="https://www.medium.com/" target="_blank"
+                       class="text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
+                        <svg class="fill-current w-4 h-4">
+                            <use xlink:href="/img/icons.svg#ic-medium" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+
+                
+                
+                <li>
+                    <a href="https://www.github.com/" target="_blank"
+                       class="text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
+                        <svg class="fill-current w-4 h-4">
+                            <use xlink:href="/img/icons.svg#ic-github" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+
+                
+                
+                <li>
+                    <a href="https://www.codepen.com/" target="_blank"
+                       class="text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
+                        <svg class="fill-current w-4 h-4">
+                            <use xlink:href="/img/icons.svg#ic-codepen" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+
+                
+                
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank"
+                       class="text-primary-text border flex h-8 items-center justify-center rounded-full w-8">
+                        <svg class="fill-current w-4 h-4">
+                            <use xlink:href="/img/icons.svg#ic-instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                    </a>
+                </li>
+                
             </ul>
+            
         </div>
     </div>
 </footer>
+
 
 </div>
 
 
 
 
-<script type="text/javascript" src="/js/manifest.ae007aff1d6f0474dd1458f9793d3a2b98f982906246c5aa1e2163ea534f1867.js" integrity="sha256-rgB6/x1vBHTdFFj5eT06K5j5gpBiRsWqHiFj6lNPGGc=" crossorigin="anonymous" defer></script>
+<script type="text/javascript" src="/js/manifest.1a8162403bfffd36e97c3d0d2f07f8bdc2fc5e65b6638b0d8d951c58e7f95327.js" integrity="sha256-GoFiQDv//TbpfD0NLwf4vcL8XmW2Y4sNjZUcWOf5Uyc=" crossorigin="anonymous" defer></script>
 
 
 
 
 
-<script type="text/javascript" src="/js/vendor.d71c54efccd7fab14b14f5cf5fe46740f7783bc091bdc55165fbece9deb4b410.js" integrity="sha256-1xxU78zX&#43;rFLFPXPX&#43;RnQPd4O8CRvcVRZfvs6d60tBA=" crossorigin="anonymous" defer></script>
+<script type="text/javascript" src="/js/vendor.eb85554152edaeec1cddbf88d24b8a84b58b07f7c06c47ca39c638f912b2d104.js" integrity="sha256-64VVQVLtruwc3b&#43;I0kuKhLWLB/fAbEfKOcY4&#43;RKy0QQ=" crossorigin="anonymous" defer></script>
 
 
 
 
 
-<script type="text/javascript" src="/js/app.4e510bca58c3a88c1495fafafbcebcd7327306ba7be9b0d85765149793f1e7f9.js" integrity="sha256-TlELyljDqIwUlfr6&#43;8681zJzBrp76bDYV2UUl5Px5/k=" crossorigin="anonymous" defer></script>
+<script type="text/javascript" src="/js/app.f6287ab79927a74392ba7d08910a37ba1bf7d413aab577df584e41577c1caed7.js" integrity="sha256-9ih6t5knp0OSun0IkQo3uhv31BOqtXffWE5BV3wcrtc=" crossorigin="anonymous" defer></script>
 
 
 </body>
